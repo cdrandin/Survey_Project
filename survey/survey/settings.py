@@ -1,6 +1,6 @@
 import os
 
-# Django settings for Bicycle_Tree project.
+# Django settings for Survey project.
 APPEND_SLASH = True
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -107,10 +107,10 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'Bicycle_Tree.urls'
+ROOT_URLCONF = 'survey.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = 'Bicycle_Tree.wsgi.application'
+WSGI_APPLICATION = 'survey.wsgi.application'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
@@ -127,7 +127,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #'Survey',
+    'survey_page',
     # Uncomment the next line to enable the admin:
     #'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
