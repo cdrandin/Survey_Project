@@ -1,14 +1,14 @@
-<!DOCTYPE html>
-<html>
-<body>
+{% extends "base_survey_page.html" %}
 
-<h3>{{name}} Details</h3>
-<iframe width="560" height="315" src="{{youtube_link|safe}}" frameborder="1" allowfullscreen></iframe>
-<br>
-<p>Description: <br>{{description}}</p><br>
+{% comment %}
 
-<li><a href="{{survey_link|safe}}">{{name}}</a></li>
+The follow are commands you can access in the html page along with the following syntax:
 
-<p>Participation #: {{count}}</p>
-</body>
-</html>
+         Access                  Syntax
+survey name                 {{survey_name}}
+youtube link                {{youtube_link}}
+survey description          {{description}}
+survey link redirection     {{link}}
+survey particpation count   {{count}}
+
+{% endcomment %}

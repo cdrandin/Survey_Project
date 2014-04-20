@@ -12,9 +12,9 @@ class SurveyPageAdmin(admin.ModelAdmin):
 	search_fields = ['description']
 	#actions = ['make_published', make_drafted]
 	fieldsets = [
-        ('Name',                 {'fields': ['name']}),
-        ('Survey Description', {'fields': ['description']}),
-        ('Survey Technical  ', {'fields': ['link', 'video_link']}),
+        ('Name'              , {'fields': ['name']              }),
+        ('Survey Description', {'fields': ['description']       }),
+        ('Survey Technical'  , {'fields': ['link', 'video_link']}),
     ]
 
 admin.site.register(SurveyPage, SurveyPageAdmin)

@@ -8,10 +8,10 @@ from django.forms import ModelForm, Textarea
 ###
 
 class SurveyPage(models.Model):
-	name = models.CharField(max_length = 40)
-	link  = models.CharField(max_length = 50)
-	description =  models.TextField(null = True)
-	video_link = models.CharField(max_length = 60, null = True)
+	name                = models.CharField(max_length = 40)
+	link                = models.CharField(max_length = 50)
+	description         =  models.TextField(null = True)
+	video_link          = models.CharField(max_length = 60, null = True)
 	participation_count = models.IntegerField(default = 0)
 
 	def __unicode__(self):

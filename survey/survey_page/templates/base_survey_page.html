@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+body
+{
+background-color:#d0e4fe;
+}
+h1
+{
+color:blue;
+text-align:center;
+}
+p
+{
+font-family:"Times New Roman";
+font-size:20px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>
+{{survey_name}} Details
+</h1>
+
+<iframe width="560" height="315" src="{{youtube_link|safe}}" frameborder="1" allowfullscreen></iframe>
+
+<p> Description: <br> 
+{{description}}
+</p>
+
+<a href="{{survey_link|safe}}">{{survey_name}}</a>
+
+<p> Participation count: <br> 
+{{count}}
+</p>
+
+</body>
+</html>
