@@ -5,6 +5,8 @@ from django.conf import settings
 urlpatterns = patterns('',
 	url(r'^$', views.app_main, name='app_main'),
 	url(r'^id/(\d+)$', views.survey_query, name='survey_query'),
+
+	url(r'^test$', views.google_charts_test, name='google_charts_test'),
 ) 
 
 '''

@@ -21,3 +21,6 @@ def survey_query(request, survey_id):
 												 'description': survey.description,
 												 'survey_link': survey.link,
 												 'count': survey.participation_count})
+
+def google_charts_test(request):
+	return render(request, 'google_charts_test.html', {'values': [['foo', 32], ['bar', 64], ['baz', 96]]})
