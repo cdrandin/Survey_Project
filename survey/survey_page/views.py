@@ -16,6 +16,8 @@ def survey_query(request, survey_id):
 	except:
 		return HttpResponse("Page does not exist")
 
+	print(survey.chart_encoding)
+	
 	return render(request, 'survey_query.html', {'survey_name': survey.name,
 												 'youtube_link': survey.video_link,
 												 'description': survey.description,

@@ -6,7 +6,7 @@ from survey_page.models import *
 ##
 
 class SurveyPageAdmin(admin.ModelAdmin):
-	list_display = ['id', 'name', 'description', 'video_link', 'link']
+	list_display = ['id', 'name', 'description', 'video_link', 'link', 'chart_encoding']
 	ordering = ['name']
 	#list_filter = ['id', 'name']
 	search_fields = ['description']
@@ -15,6 +15,7 @@ class SurveyPageAdmin(admin.ModelAdmin):
         ('Name'              , {'fields': ['name']              }),
         ('Survey Description', {'fields': ['description']       }),
         ('Survey Technical'  , {'fields': ['link', 'video_link']}),
+        ('Chart Display'     , {'fields': ['chart_encoding']}),
     ]
 
 admin.site.register(SurveyPage, SurveyPageAdmin)
