@@ -8,13 +8,19 @@ background-color:#d0e4fe;
 }
 h1
 {
-color:blue;
-text-align:center;
+	color:blue;
+	text-align:center;
 }
 p
 {
-font-family:"Times New Roman";
-font-size:20px;
+	font-family:"Times New Roman";
+	font-size:20px;
+}
+p.graph_position
+{
+	position:fixed;
+	top:30px;
+	right:5px;
 }
 </style>
 </head>
@@ -35,6 +41,11 @@ font-size:20px;
 
 <p> Participation count: <br> 
 {{count}}
+</p>
+
+<p class="graph_position">
+{% block google_chart %}
+{% endblock %}
 </p>
 
 </body>
