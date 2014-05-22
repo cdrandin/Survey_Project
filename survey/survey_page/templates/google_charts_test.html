@@ -1,3 +1,4 @@
+{% block google_chart %}
 {% load googlecharts %}
 {# container #}
 
@@ -21,7 +22,7 @@
             width: 400,
             height: 200,
             legend: { position: 'right', maxLines: 1 },
-            bar: { groupWidth: '45%' },
+            bar: { groupWidth: '55%' },
             isStacked: true,
         }
     {% endoptions %}
@@ -29,3 +30,4 @@
     {# chart is assembled from container, data and options #}
     {% graph "out" "out_data" "out_options" %}
 {% endgooglecharts %}
+{% endblock %}

@@ -14,37 +14,6 @@ survey particpation count   {{count}}
 
 {% endcomment %}
 
-
 {% block google_chart %}
-{% load googlecharts %}
-{# container #}
-
-<div id="out"></div>
-
-{% googlecharts %}
-    {# named data and options can be reused #}
-
-    {% data values "out_data" %}
-        {% col "string" "Name" %}"{{ val }}"{% endcol %}
-        {% col "number" "Stuff" %}{{ val }}{% endcol %}
-    {% enddata %}
-
-    {# you can also use global javascript variables here, #}
-    {# and call functions #}
-
-    {% options "out_options" %}
-        kind: "ColumnChart",
-        options: 
-        {
-            width: 400,
-            height: 200,
-            legend: { position: 'right', maxLines: 1 },
-            bar: { groupWidth: '55%' },
-            isStacked: true,
-        }
-    {% endoptions %}
-
-    {# chart is assembled from container, data and options #}
-    {% graph "out" "out_data" "out_options" %}
-{% endgooglecharts %}
+<img src="{{html|safe}}" width="306" height="306">
 {% endblock %}

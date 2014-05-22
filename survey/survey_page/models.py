@@ -19,6 +19,7 @@ class SurveyPage(models.Model):
 	participation_count = models.IntegerField(default = 0)
 
 	chart_encoding      = models.CharField(max_length = 100, null = False, blank = False, 
+										   help_text = "Put encoding by ascending values. If out of order. Will result in unexpected graph",
 										   validators=[RegexValidator(regex=RE, 
 										   						      message="Inapproperiate chart econding! " + 
 										   						      		  "Requires the format: {word} , {number} ;" +
